@@ -480,3 +480,138 @@ a {
     top: 105px;
     z-index: -1;
 }
+
+/* feature */
+
+.feature {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 77px 0 130px;
+    padding: 16px 0 55px;
+}
+
+.feature-media {
+    position: relative;
+}
+
+.feature__img {
+    width: 458px;
+    height: 500px;
+    border-radius: 18px;
+    border: 2px solid #fff;
+    background: linear-gradient(180deg, #c6e2fa 0%, #94c2ea 100%);
+    box-shadow: 0px 17px 77px -8px rgba(190, 165, 139, 0.17);
+    object-fit: cover;
+}
+
+.feature-decor-1,
+.feature-decor-2,
+.feature-decor-3,
+.feature-decor-4,
+.feature-decor-5,
+.feature-decor-6 {
+    position: absolute;
+}
+
+.feature-decor-1 {
+    top: 12.5px;
+    left: 388px;
+}
+
+.feature-decor-2 {
+    top: -16px;
+    left: 426px;
+}
+
+.feature-decor-3 {
+    top: 33px;
+    left: 426px;
+}
+
+.feature-decor-4 {
+    top: 268px;
+    left: 468px;
+}
+
+.feature-decor-5 {
+    top: 336px;
+    left: 427px;
+}
+
+.feature-decor-6 {
+    top: 435px;
+    left: 377px;
+}
+
+.feature__heading {
+    padding-top: 36px;
+}
+
+.feature__desc {
+    padding: 24px 0 52px;
+    width: 511px;
+}
+
+.feature-list {
+    position: relative;
+    display: flex;
+    column-gap: 56px;
+    align-items: center;
+
+    translate: -8px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.feature-item__icon {
+}
+
+.feature-item__text {
+    font-family: Sora, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #48496a;
+    white-space: nowrap;
+}
+
+.feature-list__progress {
+    position: relative;
+    width: 95px;
+    height: 2px;
+    background: var(--primary-btn-color);
+}
+
+.feature-list__progress::before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 557px;
+    height: 2px;
+    opacity: 0.07;
+    background: #ff5b2e;
+}
+.feature-item__desc {
+    width: 391px;
+    font-size: 1.4rem;
+    margin-top: 36px;
+    line-height: 1.71; /* 171.429% */
+}
+
+.feature-more {
+    display: inline-block;
+    margin-top: 28px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #ff5d31;
+}
+
+.feature-more:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+}
