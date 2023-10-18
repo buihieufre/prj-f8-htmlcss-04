@@ -3,9 +3,11 @@
 }
 
 :root {
+    --line-clamp: 1;
     --primary-font-color: #000958;
     --primary-btn-color: #ff5b2e;
     --primary-background-color: #fff2e5;
+    --font-sora: Sora, sans-serif;
 }
 
 html {
@@ -74,13 +76,13 @@ a {
 
 .heading {
     position: relative;
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-weight: 700;
     color: var(--primary-font-color);
 }
 
 .heading::before {
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-size: 1.6rem;
     font-weight: 600;
     color: #5e6085;
@@ -104,7 +106,7 @@ a {
 .line-clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: (var(--line-clamp), 1);
+    -webkit-line-clamp: var(--line-clamp, 1);
     overflow: hidden;
 }
 
@@ -245,7 +247,7 @@ a {
 }
 
 .hero-card__heading {
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 600;
@@ -294,7 +296,7 @@ a {
 
 .hero__heading {
     margin-top: 71px;
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-size: 6.6rem;
     font-weight: 800;
     line-height: 1.15; /* 115.152% */
@@ -590,7 +592,7 @@ a {
 }
 
 .feature-item__text {
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-size: 1.8rem;
     font-weight: 600;
     color: #48496a;
@@ -731,7 +733,7 @@ a {
 
 .services-item__more {
     color: #34396a;
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-size: 1.2rem;
     font-weight: 400;
     transition: color 0.25s ease-in-out;
@@ -992,7 +994,7 @@ a {
     display: inline-block;
     padding-bottom: 22px;
     color: var(--primary-font-color);
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-size: 3.4rem;
     font-weight: 700;
 }
@@ -1131,7 +1133,7 @@ a {
     display: flex;
     align-items: center;
     color: #282828;
-    font-family: Sora, sans-serif;
+    font-family: var(--font-sora);
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -1179,4 +1181,75 @@ a {
     height: 8px;
     border: 1px solid var(--primary-btn-color);
     border-radius: 50%;
+}
+
+/* Blog */
+
+.blog-wrapper {
+    padding-bottom: 130px;
+}
+
+.blog-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-top-left {
+    width: 350px;
+    margin-right: 73px;
+}
+
+.blog__view-all {
+    margin: 24px 0 54px;
+    width: 182px;
+    height: 56px;
+}
+
+.blog-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 30.6%);
+    gap: calc((100% - 3 * 30.6%) / 2);
+}
+
+.blog__img-wrapper {
+    position: relative;
+    height: 362px;
+    width: 100%;
+    border-radius: 24px;
+    background: #90ccff;
+    padding: 24px 0 0 36px;
+    overflow: hidden;
+}
+
+.blog-item__post-date {
+    color: #fff;
+    font-family: var(--font-sora);
+    font-size: 1.4rem;
+    line-height: 1.21; /* 121.429% */
+}
+
+.blog-item__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 82%;
+    object-fit: cover;
+}
+
+.blog-item__heading {
+    --line-clamp: 2;
+    margin-top: 28px;
+    width: 94.4%;
+    line-height: 1.54;
+}
+
+.blog-item__desc {
+    --line-clamp: 3;
+    margin-top: 16px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1.71; /* 171.429% */
 }
