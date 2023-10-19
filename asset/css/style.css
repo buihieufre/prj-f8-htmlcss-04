@@ -1262,25 +1262,15 @@ a {
     bottom: 0;
 }
 
-.footer-wrapper::before,
-.footer-wrapper::after {
+.footer-wrapper::before {
     position: absolute;
     content: "";
-    display: inline-block;
-    height: 100%;
-}
-
-.footer-wrapper::before {
     top: 0;
     left: 0;
+    display: inline-block;
+    height: 100%;
     width: var(--footer-left-width);
     background: var(--primary-background-color);
-}
-
-.footer-wrapper::after {
-    top: 0;
-    right: 0;
-    width: calc(100 - var(--footer-left-width));
 }
 
 .footer {
@@ -1369,7 +1359,7 @@ a {
     display: grid;
     grid-template: 48% 52% / 45% 50%;
     padding: 48px 0 0 129px;
-    gap: 20px 100px;
+    column-gap: 100px;
 }
 
 .footer-menu__column,
