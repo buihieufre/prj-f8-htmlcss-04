@@ -1065,6 +1065,7 @@ a {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 36px;
+    column-gap: 44px;
 }
 
 .feedback__btn {
@@ -1092,7 +1093,14 @@ a {
 
 .feedback__content {
     display: flex;
-    width: calc(100% - 220px);
+    width: 100%;
+    overflow: hidden;
+}
+
+.feedback-content__item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .feedback__box-img {
@@ -1127,6 +1135,7 @@ a {
 }
 
 .feedback__message {
+    --line-clamp: 5;
     padding: 24px 0 34px;
     color: #000;
     font-size: 1.8rem;
